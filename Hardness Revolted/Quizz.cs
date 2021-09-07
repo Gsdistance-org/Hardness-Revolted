@@ -33,43 +33,43 @@ namespace Hardness_Revolted
             {
                 label9.Text = "Easy";
                 quizz = new Quetsion[5];
-                maxtime = 500000;
+                maxtime = 50000;
             }
             if (hardness == 2)
             {
                 label9.Text = "Normal";
                 quizz = new Quetsion[10];
-                maxtime = 500000;
+                maxtime = 80000;
             }
             if (hardness == 3)
             {
                 label9.Text = "Medium";
                 quizz = new Quetsion[15];
-                maxtime = 1000000;
+                maxtime = 100000;
             }
             if (hardness == 4)
             {
                 label9.Text = "Hard";
                 quizz = new Quetsion[20];
-                maxtime = 1500000;
+                maxtime = 150000;
             }
             if (hardness == 5)
             {
                 label9.Text = "Insane";
                 quizz = new Quetsion[30];
-                maxtime = 1000000;
+                maxtime = 100000;
             }
             if (hardness == 6)
             {
                 label9.Text = "Expert";
                 quizz = new Quetsion[40];
-                maxtime = 1500000;
+                maxtime = 150000;
             }
             if (hardness == 7)
             {
                 label9.Text = "Why?";
                 quizz = new Quetsion[9999];
-                maxtime = 1000000;
+                maxtime = 100000;
             }
             timeleft = maxtime;
         }
