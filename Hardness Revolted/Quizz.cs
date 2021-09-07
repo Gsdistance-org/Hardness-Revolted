@@ -293,8 +293,8 @@ namespace Hardness_Revolted
                             MessageBox.Show("Wrong answer!");
                         }
                     }
-                    textBox1.Clear();
                     know++;
+                    textBox1.Clear();
                 }
                 else
                 {
