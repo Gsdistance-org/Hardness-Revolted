@@ -302,5 +302,11 @@ namespace Hardness_Revolted
                 }
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Notepad np = new Notepad();
+            np.Show();
+        }
     }
 }
