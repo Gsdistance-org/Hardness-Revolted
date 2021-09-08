@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -76,7 +77,16 @@ namespace Hardness_Revolted
         private void tofile()
         {
             int i = 0;
-            while(i < )
+            while(i < quizz.Length)
+            {
+                string[] write = new string[4];
+                write[0] = Convert.ToString(quizz[i].a);
+                write[1] = Convert.ToString(quizz[i].b);
+                write[2] = Convert.ToString(quizz[i].c);
+                write[3] = Convert.ToString(quizz[i].d);
+                write[4] = Convert.ToString(quizz[i].op);
+                File.AppendAllLines(@".\writtenfile.loaded",write);
+            }
         }
         private Quetsion[] gen(Quetsion[] quetsion,int hardness)
         {
@@ -312,6 +322,11 @@ namespace Hardness_Revolted
         {
             Notepad np = new Notepad();
             np.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            tofile();
         }
     }
 }
