@@ -73,6 +73,11 @@ namespace Hardness_Revolted
             }
             timeleft = maxtime;
         }
+        private void tofile()
+        {
+            int i = 0;
+            while(i < )
+        }
         private Quetsion[] gen(Quetsion[] quetsion,int hardness)
         {
             int i = 0;
