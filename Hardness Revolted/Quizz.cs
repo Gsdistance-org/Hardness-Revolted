@@ -107,10 +107,10 @@ namespace Hardness_Revolted
                 if (hardness == 2)
                 {
                     Quetsion gened;
-                    gened.a = rng.Next(1, 999);
-                    gened.b = rng.Next(1, 999);
-                    gened.c = rng.Next(1, 999);
-                    gened.d = rng.Next(1, 999);
+                    gened.a = rng.Next(-99, 999);
+                    gened.b = rng.Next(-99, 999);
+                    gened.c = rng.Next(-99, 999);
+                    gened.d = rng.Next(-99, 999);
                     gened.op = rng.Next(1, 4);
                     quetsion[i] = gened;
                     i++;
@@ -118,10 +118,10 @@ namespace Hardness_Revolted
                 if (hardness == 3)
                 {
                     Quetsion gened;
-                    gened.a = rng.Next(1, 9999);
-                    gened.b = rng.Next(1, 9999);
-                    gened.c = rng.Next(1, 9999);
-                    gened.d = rng.Next(1, 9999);
+                    gened.a = rng.Next(-999, 9999);
+                    gened.b = rng.Next(-999, 9999);
+                    gened.c = rng.Next(-999, 9999);
+                    gened.d = rng.Next(-999, 9999);
                     gened.op = rng.Next(1, 4);
                     quetsion[i] = gened;
                     i++;
@@ -129,10 +129,10 @@ namespace Hardness_Revolted
                 if (hardness == 4)
                 {
                     Quetsion gened;
-                    gened.a = rng.Next(1, 99999);
-                    gened.b = rng.Next(1, 99999);
-                    gened.c = rng.Next(1, 99999);
-                    gened.d = rng.Next(1, 99999);
+                    gened.a = rng.Next(-9999, 99999);
+                    gened.b = rng.Next(-9999, 99999);
+                    gened.c = rng.Next(-9999, 99999);
+                    gened.d = rng.Next(-9999, 99999);
                     gened.op = rng.Next(1, 4);
                     quetsion[i] = gened;
                     i++;
@@ -140,10 +140,10 @@ namespace Hardness_Revolted
                 if (hardness == 5)
                 {
                     Quetsion gened;
-                    gened.a = rng.Next(1, 999999);
-                    gened.b = rng.Next(1, 999999);
-                    gened.c = rng.Next(1, 999999);
-                    gened.d = rng.Next(1, 999999);
+                    gened.a = rng.Next(-99999, 999999);
+                    gened.b = rng.Next(-99999, 999999);
+                    gened.c = rng.Next(-99999, 999999);
+                    gened.d = rng.Next(-99999, 999999);
                     gened.op = rng.Next(1, 4);
                     quetsion[i] = gened;
                     i++;
@@ -151,10 +151,10 @@ namespace Hardness_Revolted
                 if (hardness == 6)
                 {
                     Quetsion gened;
-                    gened.a = rng.Next(1, 9999999);
-                    gened.b = rng.Next(1, 9999999);
-                    gened.c = rng.Next(1, 9999999);
-                    gened.d = rng.Next(1, 9999999);
+                    gened.a = rng.Next(-999999, 9999999);
+                    gened.b = rng.Next(-999999, 9999999);
+                    gened.c = rng.Next(-999999, 9999999);
+                    gened.d = rng.Next(-999999, 9999999);
                     gened.op = rng.Next(1, 4);
                     quetsion[i] = gened;
                     i++;
@@ -162,10 +162,10 @@ namespace Hardness_Revolted
                 if (hardness == 7)
                 {
                     Quetsion gened;
-                    gened.a = rng.Next(1, 999999999);
-                    gened.b = rng.Next(1, 999999999);
-                    gened.c = rng.Next(1, 99999999);
-                    gened.d = rng.Next(1, 99999999);
+                    gened.a = rng.Next(-999999999, 999999999);
+                    gened.b = rng.Next(-999999999, 999999999);
+                    gened.c = rng.Next(-999999999, 99999999);
+                    gened.d = rng.Next(-999999999, 99999999);
                     gened.op = rng.Next(1, 5);
                     quetsion[i] = gened;
                     i++;
