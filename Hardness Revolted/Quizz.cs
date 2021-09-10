@@ -260,7 +260,7 @@ namespace Hardness_Revolted
                             MessageBox.Show("Wrong answer!");
                         }
                     }
-                    if (quizz[know].op == 2)
+                    else if (quizz[know].op == 2)
                     {
                         if (textBox1.Text == Convert.ToString(quizz[know].a - quizz[know].b - quizz[know].c - quizz[know].d))
                         {
@@ -272,7 +272,7 @@ namespace Hardness_Revolted
                             MessageBox.Show("Wrong answer!");
                         }
                     }
-                    if (quizz[know].op == 3)
+                    else if (quizz[know].op == 3)
                     {
                         if (textBox1.Text == Convert.ToString(quizz[know].a * quizz[know].b * quizz[know].c * quizz[know].d))
                         {
@@ -284,7 +284,7 @@ namespace Hardness_Revolted
                             MessageBox.Show("Wrong answer!");
                         }
                     }
-                    if (quizz[know].op == 4)
+                    else if (quizz[know].op == 4)
                     {
                         if (textBox1.Text == Convert.ToString(quizz[know].a / quizz[know].b / quizz[know].c / quizz[know].d))
                         {
@@ -296,7 +296,7 @@ namespace Hardness_Revolted
                             MessageBox.Show("Wrong answer!");
                         }
                     }
-                    if (quizz[know].op == 5)
+                    else if (quizz[know].op == 5)
                     {
                         if (textBox1.Text == Convert.ToString(quizz[know].a % quizz[know].b % quizz[know].c % quizz[know].d))
                         {
@@ -314,6 +314,7 @@ namespace Hardness_Revolted
                 else
                 {
                     MessageBox.Show("Test done\nAnswers:" + rknow + "/" + mknow);
+                    this.Close();
                 }
             }
         }
