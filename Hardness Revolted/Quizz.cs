@@ -611,16 +611,8 @@ namespace Hardness_Revolted
                         label15.Text = "%";
                         label16.Text = "%";
                     }
-                    if (!tfff)
-                    {
-                        tfff = true;
-                        textBox1.Clear();
-                    }
-                    else
-                    {
-                        know++;
-                        textBox1.Clear();
-                    }
+                    know++;
+                    textBox1.Clear();
                 }
                 else
                 {
