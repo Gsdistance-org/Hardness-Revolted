@@ -71,5 +71,10 @@ namespace Hardness_Revolted
             Quizz qz = new Quizz();
             qz.Show();
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            nums = Convert.ToInt32(comboBox1.Text);
+        }
     }
 }

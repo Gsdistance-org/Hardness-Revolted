@@ -46,6 +46,13 @@ namespace Hardness_Revolted
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -98,9 +105,9 @@ namespace Hardness_Revolted
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(0, 209);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(58, 17);
+            this.label6.Size = new System.Drawing.Size(348, 17);
             this.label6.TabIndex = 5;
-            this.label6.Text = "----------";
+            this.label6.Text = "--------------------------------------------------------------------";
             // 
             // textBox1
             // 
@@ -185,11 +192,82 @@ namespace Hardness_Revolted
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(326, 61);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(22, 23);
+            this.button4.TabIndex = 14;
+            this.button4.Text = "-";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(66, 192);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(32, 17);
+            this.label11.TabIndex = 15;
+            this.label11.Text = "000";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(119, 192);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(32, 17);
+            this.label12.TabIndex = 16;
+            this.label12.Text = "000";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(174, 192);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(32, 17);
+            this.label13.TabIndex = 17;
+            this.label13.Text = "000";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(44, 192);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(16, 17);
+            this.label14.TabIndex = 18;
+            this.label14.Text = "+";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(97, 192);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(16, 17);
+            this.label15.TabIndex = 19;
+            this.label15.Text = "+";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(152, 192);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(16, 17);
+            this.label16.TabIndex = 20;
+            this.label16.Text = "+";
+            // 
             // Quizz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(351, 257);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -230,5 +308,12 @@ namespace Hardness_Revolted
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
     }
 }

@@ -9,6 +9,7 @@ namespace Hardness_Revolted
     internal static class Rntm
     {
         internal static short hardness;
+        internal static int nums;
     }
     internal struct Quetsion
     {

@@ -15,10 +15,12 @@ namespace Hardness_Revolted
 {
     public partial class Quizz : Form
     {
+        bool thhh = true;
         bool isstarted = false;
         int know = 0;
         int rknow;
         int mknow;
+        int numbers;
         Random rng = new Random();
         Quetsion[] quizz;
         int timeleft = 5000000;
@@ -30,7 +32,14 @@ namespace Hardness_Revolted
 
         private void Quizz_Load(object sender, EventArgs e)
         {
-            if(hardness == 1)
+            numbers = nums;
+            label11.Hide();
+            label12.Hide();
+            label13.Hide();
+            label14.Hide();
+            label15.Hide();
+            label16.Hide();
+            if (hardness == 1)
             {
                 label9.Text = "Easy";
                 quizz = new Quetsion[5];
@@ -179,6 +188,96 @@ namespace Hardness_Revolted
             label7.Text = timeleft / 100 + "/" + maxtime / 100;
             label10.Text = Convert.ToString(rknow);
             label8.Text = know + "/" + mknow;
+            if (thhh)
+            {
+                if (numbers == 2)
+                {
+                    label1.Show();
+                    label2.Show();
+                    label3.Hide();
+                    label4.Hide();
+                    label5.Show();
+                    label11.Hide();
+                    label12.Hide();
+                    label13.Hide();
+                    label14.Hide();
+                    label15.Hide();
+                    label16.Hide();
+                }
+                if (numbers == 3)
+                {
+                    label1.Show();
+                    label2.Show();
+                    label3.Show();
+                    label4.Hide();
+                    label5.Show();
+                    label11.Hide();
+                    label12.Hide();
+                    label13.Hide();
+                    label14.Hide();
+                    label15.Hide();
+                    label16.Hide();
+                }
+                if (numbers == 4)
+                {
+                    label1.Show();
+                    label2.Show();
+                    label3.Show();
+                    label4.Show();
+                    label5.Show();
+                    label11.Hide();
+                    label12.Hide();
+                    label13.Hide();
+                    label14.Hide();
+                    label15.Hide();
+                    label16.Hide();
+                }
+            }
+            else
+            {
+                if (numbers == 2)
+                {
+                    label1.Hide();
+                    label2.Hide();
+                    label3.Hide();
+                    label4.Show();
+                    label5.Hide();
+                    label11.Show();
+                    label12.Hide();
+                    label13.Hide();
+                    label14.Show();
+                    label15.Show();
+                    label16.Show();
+                }
+                if (numbers == 3)
+                {
+                    label1.Hide();
+                    label2.Hide();
+                    label3.Hide();
+                    label4.Show();
+                    label5.Hide();
+                    label11.Show();
+                    label12.Show();
+                    label13.Hide();
+                    label14.Show();
+                    label15.Show();
+                    label16.Show();
+                }
+                if (numbers == 4)
+                {
+                    label1.Hide();
+                    label2.Hide();
+                    label3.Hide();
+                    label4.Show();
+                    label5.Hide();
+                    label11.Show();
+                    label12.Show();
+                    label13.Show();
+                    label14.Show();
+                    label15.Show();
+                    label16.Show();
+                }
+            }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -198,26 +297,44 @@ namespace Hardness_Revolted
                 label2.Text = Convert.ToString(quizz[0].b);
                 label3.Text = Convert.ToString(quizz[0].c);
                 label4.Text = Convert.ToString(quizz[0].d);
+                label11.Text = Convert.ToString(quizz[0].b);
+                label12.Text = Convert.ToString(quizz[0].c);
+                label13.Text = Convert.ToString(quizz[0].d);
                 mknow = quizz.Length;
                 if(quizz[0].op == 1)
                 {
                     label5.Text = "+";
+                    label14.Text = "+";
+                    label15.Text = "+";
+                    label16.Text = "+";
                 }
                 if (quizz[0].op == 2)
                 {
                     label5.Text = "-";
+                    label14.Text = "-";
+                    label15.Text = "-";
+                    label16.Text = "-";
                 }
                 if (quizz[0].op == 3)
                 {
                     label5.Text = "*";
+                    label14.Text = "*";
+                    label15.Text = "*";
+                    label16.Text = "*";
                 }
                 if (quizz[0].op == 4)
                 {
                     label5.Text = "/";
+                    label14.Text = "/";
+                    label15.Text = "/";
+                    label16.Text = "/";
                 }
                 if (quizz[0].op == 5)
                 {
                     label5.Text = "%";
+                    label14.Text = "%";
+                    label15.Text = "%";
+                    label16.Text = "%";
                 }
             }
             else
@@ -228,84 +345,228 @@ namespace Hardness_Revolted
                     label2.Text = Convert.ToString(quizz[know].b);
                     label3.Text = Convert.ToString(quizz[know].c);
                     label4.Text = Convert.ToString(quizz[know].d);
-                    if (quizz[know].op == 1)
+                    if (quizz[0].op == 1)
                     {
                         label5.Text = "+";
+                        label14.Text = "+";
+                        label15.Text = "+";
+                        label16.Text = "+";
                     }
-                    if (quizz[know].op == 2)
+                    if (quizz[0].op == 2)
                     {
                         label5.Text = "-";
+                        label14.Text = "-";
+                        label15.Text = "-";
+                        label16.Text = "-";
                     }
-                    if (quizz[know].op == 3)
+                    if (quizz[0].op == 3)
                     {
                         label5.Text = "*";
+                        label14.Text = "*";
+                        label15.Text = "*";
+                        label16.Text = "*";
                     }
-                    if (quizz[know].op == 4)
+                    if (quizz[0].op == 4)
                     {
                         label5.Text = "/";
+                        label14.Text = "/";
+                        label15.Text = "/";
+                        label16.Text = "/";
                     }
-                    if (quizz[know].op == 5)
+                    if (quizz[0].op == 5)
                     {
                         label5.Text = "%";
+                        label14.Text = "%";
+                        label15.Text = "%";
+                        label16.Text = "%";
                     }
-                    if (quizz[know].op == 1)
+                    if (numbers == 2)
                     {
-                        if (textBox1.Text == Convert.ToString(quizz[know].a + quizz[know].b + quizz[know].c + quizz[know].d))
+                        if (quizz[know].op == 1)
                         {
-                            MessageBox.Show("Right Answer!");
-                            rknow++;
+                            if (textBox1.Text == Convert.ToString(quizz[know].a + quizz[know].b))
+                            {
+                                MessageBox.Show("Right Answer!");
+                                rknow++;
+                            }
+                            else
+                            {
+                                MessageBox.Show("Wrong answer!");
+                            }
                         }
-                        else
+                        else if (quizz[know].op == 2)
                         {
-                            MessageBox.Show("Wrong answer!");
+                            if (textBox1.Text == Convert.ToString(quizz[know].a - quizz[know].b))
+                            {
+                                MessageBox.Show("Right Answer!");
+                                rknow++;
+                            }
+                            else
+                            {
+                                MessageBox.Show("Wrong answer!");
+                            }
+                        }
+                        else if (quizz[know].op == 3)
+                        {
+                            if (textBox1.Text == Convert.ToString(quizz[know].a * quizz[know].b))
+                            {
+                                MessageBox.Show("Right Answer!");
+                                rknow++;
+                            }
+                            else
+                            {
+                                MessageBox.Show("Wrong answer!");
+                            }
+                        }
+                        else if (quizz[know].op == 4)
+                        {
+                            if (textBox1.Text == Convert.ToString(quizz[know].a / quizz[know].b))
+                            {
+                                MessageBox.Show("Right Answer!");
+                                rknow++;
+                            }
+                            else
+                            {
+                                MessageBox.Show("Wrong answer!");
+                            }
+                        }
+                        else if (quizz[know].op == 5)
+                        {
+                            if (textBox1.Text == Convert.ToString(quizz[know].a % quizz[know].b))
+                            {
+                                MessageBox.Show("Right Answer!");
+                                rknow++;
+                            }
+                            else
+                            {
+                                MessageBox.Show("Wrong answer!");
+                            }
                         }
                     }
-                    else if (quizz[know].op == 2)
+                    if (numbers == 3)
                     {
-                        if (textBox1.Text == Convert.ToString(quizz[know].a - quizz[know].b - quizz[know].c - quizz[know].d))
+                        if (quizz[know].op == 1)
                         {
-                            MessageBox.Show("Right Answer!");
-                            rknow++;
+                            if (textBox1.Text == Convert.ToString(quizz[know].a + quizz[know].b + quizz[know].c))
+                            {
+                                MessageBox.Show("Right Answer!");
+                                rknow++;
+                            }
+                            else
+                            {
+                                MessageBox.Show("Wrong answer!");
+                            }
                         }
-                        else
+                        else if (quizz[know].op == 2)
                         {
-                            MessageBox.Show("Wrong answer!");
+                            if (textBox1.Text == Convert.ToString(quizz[know].a - quizz[know].b - quizz[know].c))
+                            {
+                                MessageBox.Show("Right Answer!");
+                                rknow++;
+                            }
+                            else
+                            {
+                                MessageBox.Show("Wrong answer!");
+                            }
+                        }
+                        else if (quizz[know].op == 3)
+                        {
+                            if (textBox1.Text == Convert.ToString(quizz[know].a * quizz[know].b * quizz[know].c))
+                            {
+                                MessageBox.Show("Right Answer!");
+                                rknow++;
+                            }
+                            else
+                            {
+                                MessageBox.Show("Wrong answer!");
+                            }
+                        }
+                        else if (quizz[know].op == 4)
+                        {
+                            if (textBox1.Text == Convert.ToString(quizz[know].a / quizz[know].b / quizz[know].c))
+                            {
+                                MessageBox.Show("Right Answer!");
+                                rknow++;
+                            }
+                            else
+                            {
+                                MessageBox.Show("Wrong answer!");
+                            }
+                        }
+                        else if (quizz[know].op == 5)
+                        {
+                            if (textBox1.Text == Convert.ToString(quizz[know].a % quizz[know].b % quizz[know].c))
+                            {
+                                MessageBox.Show("Right Answer!");
+                                rknow++;
+                            }
+                            else
+                            {
+                                MessageBox.Show("Wrong answer!");
+                            }
                         }
                     }
-                    else if (quizz[know].op == 3)
+                    if (numbers == 4)
                     {
-                        if (textBox1.Text == Convert.ToString(quizz[know].a * quizz[know].b * quizz[know].c * quizz[know].d))
+                        if (quizz[know].op == 1)
                         {
-                            MessageBox.Show("Right Answer!");
-                            rknow++;
+                            if (textBox1.Text == Convert.ToString(quizz[know].a + quizz[know].b + quizz[know].c + quizz[know].d))
+                            {
+                                MessageBox.Show("Right Answer!");
+                                rknow++;
+                            }
+                            else
+                            {
+                                MessageBox.Show("Wrong answer!");
+                            }
                         }
-                        else
+                        else if (quizz[know].op == 2)
                         {
-                            MessageBox.Show("Wrong answer!");
+                            if (textBox1.Text == Convert.ToString(quizz[know].a - quizz[know].b - quizz[know].c - quizz[know].d))
+                            {
+                                MessageBox.Show("Right Answer!");
+                                rknow++;
+                            }
+                            else
+                            {
+                                MessageBox.Show("Wrong answer!");
+                            }
                         }
-                    }
-                    else if (quizz[know].op == 4)
-                    {
-                        if (textBox1.Text == Convert.ToString(quizz[know].a / quizz[know].b / quizz[know].c / quizz[know].d))
+                        else if (quizz[know].op == 3)
                         {
-                            MessageBox.Show("Right Answer!");
-                            rknow++;
+                            if (textBox1.Text == Convert.ToString(quizz[know].a * quizz[know].b * quizz[know].c * quizz[know].d))
+                            {
+                                MessageBox.Show("Right Answer!");
+                                rknow++;
+                            }
+                            else
+                            {
+                                MessageBox.Show("Wrong answer!");
+                            }
                         }
-                        else
+                        else if (quizz[know].op == 4)
                         {
-                            MessageBox.Show("Wrong answer!");
+                            if (textBox1.Text == Convert.ToString(quizz[know].a / quizz[know].b / quizz[know].c / quizz[know].d))
+                            {
+                                MessageBox.Show("Right Answer!");
+                                rknow++;
+                            }
+                            else
+                            {
+                                MessageBox.Show("Wrong answer!");
+                            }
                         }
-                    }
-                    else if (quizz[know].op == 5)
-                    {
-                        if (textBox1.Text == Convert.ToString(quizz[know].a % quizz[know].b % quizz[know].c % quizz[know].d))
+                        else if (quizz[know].op == 5)
                         {
-                            MessageBox.Show("Right Answer!");
-                            rknow++;
-                        }
-                        else
-                        {
-                            MessageBox.Show("Wrong answer!");
+                            if (textBox1.Text == Convert.ToString(quizz[know].a % quizz[know].b % quizz[know].c % quizz[know].d))
+                            {
+                                MessageBox.Show("Right Answer!");
+                                rknow++;
+                            }
+                            else
+                            {
+                                MessageBox.Show("Wrong answer!");
+                            }
                         }
                     }
                     know++;
@@ -328,6 +589,20 @@ namespace Hardness_Revolted
         private void button3_Click(object sender, EventArgs e)
         {
             tofile();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (thhh)
+            {
+                thhh = false;
+                button4.Text = "|";
+            }
+            else
+            {
+                thhh = true;
+                button4.Text = "-";
+            }
         }
     }
 }
