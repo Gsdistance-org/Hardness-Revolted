@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DEVlog\DLS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DEVlog\DLS.Designer.cs">
+      <DependentUpon>DLS.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +73,9 @@
       <DependentUpon>Quizz.cs</DependentUpon>
     </Compile>
     <Compile Include="Rntm.cs" />
+    <EmbeddedResource Include="DEVlog\DLS.resx">
+      <DependentUpon>DLS.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -98,5 +107,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

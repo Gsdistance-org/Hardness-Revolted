@@ -53,6 +53,10 @@ namespace Hardness_Revolted
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.dEVlogToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.autoAnswerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -256,6 +260,35 @@ namespace Hardness_Revolted
             this.label16.TabIndex = 20;
             this.label16.Text = "+";
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dEVlogToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(351, 28);
+            this.menuStrip1.TabIndex = 21;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // dEVlogToolStripMenuItem
+            // 
+            this.dEVlogToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.autoAnswerToolStripMenuItem});
+            this.dEVlogToolStripMenuItem.Name = "dEVlogToolStripMenuItem";
+            this.dEVlogToolStripMenuItem.Size = new System.Drawing.Size(73, 24);
+            this.dEVlogToolStripMenuItem.Text = "DEVlog";
+            // 
+            // autoAnswerToolStripMenuItem
+            // 
+            this.autoAnswerToolStripMenuItem.Name = "autoAnswerToolStripMenuItem";
+            this.autoAnswerToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
+            | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.S)));
+            this.autoAnswerToolStripMenuItem.Size = new System.Drawing.Size(295, 26);
+            this.autoAnswerToolStripMenuItem.Text = "Auto Answer";
+            this.autoAnswerToolStripMenuItem.Click += new System.EventHandler(this.autoAnswerToolStripMenuItem_Click);
+            // 
             // Quizz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -282,9 +315,13 @@ namespace Hardness_Revolted
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Quizz";
             this.Text = "Quizz";
             this.Load += new System.EventHandler(this.Quizz_Load);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -315,5 +352,8 @@ namespace Hardness_Revolted
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem dEVlogToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem autoAnswerToolStripMenuItem;
     }
 }

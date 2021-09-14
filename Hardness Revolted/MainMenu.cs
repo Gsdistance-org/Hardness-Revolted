@@ -20,7 +20,7 @@ namespace Hardness_Revolted
 
         private void MainMenu_Load(object sender, EventArgs e)
         {
-
+            nums = 4;
         }
 
         private void button1_Click(object sender, EventArgs e)

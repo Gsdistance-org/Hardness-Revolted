@@ -32,6 +32,7 @@ namespace Hardness_Revolted
 
         private void Quizz_Load(object sender, EventArgs e)
         {
+            menuStrip1.Hide();
             numbers = nums;
             label11.Hide();
             label12.Hide();
@@ -192,10 +193,10 @@ namespace Hardness_Revolted
             {
                 if (numbers == 2)
                 {
-                    label1.Show();
-                    label2.Show();
-                    label3.Hide();
-                    label4.Hide();
+                    label1.Hide();
+                    label2.Hide();
+                    label3.Show();
+                    label4.Show();
                     label5.Show();
                     label11.Hide();
                     label12.Hide();
@@ -206,10 +207,10 @@ namespace Hardness_Revolted
                 }
                 if (numbers == 3)
                 {
-                    label1.Show();
+                    label1.Hide();
                     label2.Show();
                     label3.Show();
-                    label4.Hide();
+                    label4.Show();
                     label5.Show();
                     label11.Hide();
                     label12.Hide();
@@ -569,6 +570,45 @@ namespace Hardness_Revolted
                             }
                         }
                     }
+                    label1.Text = Convert.ToString(quizz[know].a);
+                    label2.Text = Convert.ToString(quizz[know].b);
+                    label3.Text = Convert.ToString(quizz[know].c);
+                    label4.Text = Convert.ToString(quizz[know].d);
+                    if (quizz[0].op == 1)
+                    {
+                        label5.Text = "+";
+                        label14.Text = "+";
+                        label15.Text = "+";
+                        label16.Text = "+";
+                    }
+                    if (quizz[0].op == 2)
+                    {
+                        label5.Text = "-";
+                        label14.Text = "-";
+                        label15.Text = "-";
+                        label16.Text = "-";
+                    }
+                    if (quizz[0].op == 3)
+                    {
+                        label5.Text = "*";
+                        label14.Text = "*";
+                        label15.Text = "*";
+                        label16.Text = "*";
+                    }
+                    if (quizz[0].op == 4)
+                    {
+                        label5.Text = "/";
+                        label14.Text = "/";
+                        label15.Text = "/";
+                        label16.Text = "/";
+                    }
+                    if (quizz[0].op == 5)
+                    {
+                        label5.Text = "%";
+                        label14.Text = "%";
+                        label15.Text = "%";
+                        label16.Text = "%";
+                    }
                     know++;
                     textBox1.Clear();
                 }
@@ -602,6 +642,79 @@ namespace Hardness_Revolted
             {
                 thhh = true;
                 button4.Text = "-";
+            }
+        }
+
+        private void autoAnswerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (numbers == 2)
+            {
+                if (quizz[know].op == 1)
+                {
+                    textBox1.Text = Convert.ToString(quizz[know].a + quizz[know].b);
+                }
+                else if (quizz[know].op == 2)
+                {
+                    textBox1.Text = Convert.ToString(quizz[know].a - quizz[know].b);
+                }
+                else if (quizz[know].op == 3)
+                {
+                    textBox1.Text = Convert.ToString(quizz[know].a * quizz[know].b);
+                }
+                else if (quizz[know].op == 4)
+                {
+                    textBox1.Text = Convert.ToString(quizz[know].a / quizz[know].b);
+                }
+                else if (quizz[know].op == 5)
+                {
+                    textBox1.Text = Convert.ToString(quizz[know].a % quizz[know].b);
+                }
+            }
+            if (numbers == 3)
+            {
+                if (quizz[know].op == 1)
+                {
+                    textBox1.Text = Convert.ToString(quizz[know].a + quizz[know].b + quizz[know].c);
+                }
+                else if (quizz[know].op == 2)
+                {
+                    textBox1.Text = Convert.ToString(quizz[know].a - quizz[know].b - quizz[know].c);
+                }
+                else if (quizz[know].op == 3)
+                {
+                    textBox1.Text = Convert.ToString(quizz[know].a * quizz[know].b * quizz[know].c);
+                }
+                else if (quizz[know].op == 4)
+                {
+                    textBox1.Text = Convert.ToString(quizz[know].a / quizz[know].b / quizz[know].c);
+                }
+                else if (quizz[know].op == 5)
+                {
+                    textBox1.Text = Convert.ToString(quizz[know].a % quizz[know].b % quizz[know].c);
+                }
+            }
+            if (numbers == 4)
+            {
+                if (quizz[know].op == 1)
+                {
+                    textBox1.Text = Convert.ToString(quizz[know].a + quizz[know].b + quizz[know].c + quizz[know].d);
+                }
+                else if (quizz[know].op == 2)
+                {
+                    textBox1.Text = Convert.ToString(quizz[know].a - quizz[know].b - quizz[know].c - quizz[know].d);
+                }
+                else if (quizz[know].op == 3)
+                {
+                    textBox1.Text = Convert.ToString(quizz[know].a * quizz[know].b * quizz[know].c * quizz[know].d);
+                }
+                else if (quizz[know].op == 4)
+                {
+                    textBox1.Text = Convert.ToString(quizz[know].a / quizz[know].b / quizz[know].c / quizz[know].d);
+                }
+                else if (quizz[know].op == 5)
+                {
+                    textBox1.Text = Convert.ToString(quizz[know].a % quizz[know].b % quizz[know].c % quizz[know].d);
+                }
             }
         }
     }
