@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Hardness_Revolted.Rntm;
+using Hardness_Revolted;
 
 namespace Hardness_Revolted.DEVlog
 {
@@ -24,7 +26,9 @@ namespace Hardness_Revolted.DEVlog
 
         private void loader_Tick(object sender, EventArgs e)
         {
-
+            label1.Text = "Rntm.Hardness :" + Rntm.hardness;
+            label2.Text = "Rntm.Nums :" + Rntm.nums;
+            label3 .Text = "Quizz.thhh :" + Convert.ToString(Quizz.)
         }
     }
 }

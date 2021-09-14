@@ -56,6 +56,7 @@ namespace Hardness_Revolted
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.dEVlogToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.autoAnswerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.writer = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -289,6 +290,12 @@ namespace Hardness_Revolted
             this.autoAnswerToolStripMenuItem.Text = "Auto Answer";
             this.autoAnswerToolStripMenuItem.Click += new System.EventHandler(this.autoAnswerToolStripMenuItem_Click);
             // 
+            // writer
+            // 
+            this.writer.Enabled = true;
+            this.writer.Interval = 1;
+            this.writer.Tick += new System.EventHandler(this.writer_Tick);
+            // 
             // Quizz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -355,5 +362,6 @@ namespace Hardness_Revolted
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem dEVlogToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem autoAnswerToolStripMenuItem;
+        private System.Windows.Forms.Timer writer;
     }
 }

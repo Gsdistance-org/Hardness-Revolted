@@ -10,21 +10,22 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static Hardness_Revolted.Rntm;
+using static Hardness_Revolted.DLS;
 
 namespace Hardness_Revolted
 {
     public partial class Quizz : Form
     {
-        bool thhh = true;
-        bool isstarted = false;
-        int know = 0;
-        int rknow;
-        int mknow;
-        int numbers;
+        internal bool thhh = true;
+        internal bool isstarted = false;
+        internal int know = 0;
+        internal int rknow;
+        internal int mknow;
+        internal int numbers;
         Random rng = new Random();
-        Quetsion[] quizz;
-        int timeleft = 5000000;
-        int maxtime;
+        internal Quetsion[] quizz;
+        internal int timeleft = 5000000;
+        internal int maxtime;
         public Quizz()
         {
             InitializeComponent();
@@ -716,6 +717,13 @@ namespace Hardness_Revolted
                     textBox1.Text = Convert.ToString(quizz[know].a % quizz[know].b % quizz[know].c % quizz[know].d);
                 }
             }
+        }
+
+        private void writer_Tick(object sender, EventArgs e)
+        {
+            DLS.Quizz[0] = thhh.ToString();
+            DLS.Quizz[1] = isstarted.ToString();
+
         }
     }
 }

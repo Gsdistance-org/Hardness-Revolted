@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace Hardness_Revolted
 {
+    internal static class DLS
+    {
+        internal static string[] Quizz = new string[9];
+    }
     internal static class Rntm
     {
         internal static short hardness;
