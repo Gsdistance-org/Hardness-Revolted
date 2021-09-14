@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Hardness_Revolted
 {
-    internal static class DLS
+    internal static class DlS
     {
         internal static string[] Quizz = new string[9];
     }

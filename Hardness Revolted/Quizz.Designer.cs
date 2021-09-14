@@ -57,6 +57,7 @@ namespace Hardness_Revolted
             this.dEVlogToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.autoAnswerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.writer = new System.Windows.Forms.Timer(this.components);
+            this.dLSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -275,7 +276,8 @@ namespace Hardness_Revolted
             // dEVlogToolStripMenuItem
             // 
             this.dEVlogToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.autoAnswerToolStripMenuItem});
+            this.autoAnswerToolStripMenuItem,
+            this.dLSToolStripMenuItem});
             this.dEVlogToolStripMenuItem.Name = "dEVlogToolStripMenuItem";
             this.dEVlogToolStripMenuItem.Size = new System.Drawing.Size(73, 24);
             this.dEVlogToolStripMenuItem.Text = "DEVlog";
@@ -295,6 +297,16 @@ namespace Hardness_Revolted
             this.writer.Enabled = true;
             this.writer.Interval = 1;
             this.writer.Tick += new System.EventHandler(this.writer_Tick);
+            // 
+            // dLSToolStripMenuItem
+            // 
+            this.dLSToolStripMenuItem.Name = "dLSToolStripMenuItem";
+            this.dLSToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
+            | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.D)));
+            this.dLSToolStripMenuItem.Size = new System.Drawing.Size(295, 26);
+            this.dLSToolStripMenuItem.Text = "DLS";
+            this.dLSToolStripMenuItem.Click += new System.EventHandler(this.dLSToolStripMenuItem_Click);
             // 
             // Quizz
             // 
@@ -363,5 +375,6 @@ namespace Hardness_Revolted
         private System.Windows.Forms.ToolStripMenuItem dEVlogToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem autoAnswerToolStripMenuItem;
         private System.Windows.Forms.Timer writer;
+        private System.Windows.Forms.ToolStripMenuItem dLSToolStripMenuItem;
     }
 }

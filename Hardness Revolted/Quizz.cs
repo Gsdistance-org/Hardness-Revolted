@@ -10,12 +10,13 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static Hardness_Revolted.Rntm;
-using static Hardness_Revolted.DLS;
+using static Hardness_Revolted.DlS;
 
 namespace Hardness_Revolted
 {
     public partial class Quizz : Form
     {
+        internal bool tfff = false;
         internal bool thhh = true;
         internal bool isstarted = false;
         internal int know = 0;
@@ -610,8 +611,16 @@ namespace Hardness_Revolted
                         label15.Text = "%";
                         label16.Text = "%";
                     }
-                    know++;
-                    textBox1.Clear();
+                    if (!tfff)
+                    {
+                        tfff = true;
+                        textBox1.Clear();
+                    }
+                    else
+                    {
+                        know++;
+                        textBox1.Clear();
+                    }
                 }
                 else
                 {
@@ -721,9 +730,19 @@ namespace Hardness_Revolted
 
         private void writer_Tick(object sender, EventArgs e)
         {
-            DLS.Quizz[0] = thhh.ToString();
-            DLS.Quizz[1] = isstarted.ToString();
+            DlS.Quizz[0] = thhh.ToString();
+            DlS.Quizz[1] = isstarted.ToString();
+            DlS.Quizz[2] = know.ToString();
+            DlS.Quizz[3] = mknow.ToString();
+            DlS.Quizz[4] = numbers.ToString();
+            DlS.Quizz[5] = maxtime.ToString();
+            DlS.Quizz[6] = timeleft.ToString();
+        }
 
+        private void dLSToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DEVlog.DLS dls = new DEVlog.DLS();
+            dls.Show();
         }
     }
 }
